@@ -11,4 +11,21 @@ CREATE TABLE public."Fakt"
 
 UPDATE Fakt
 SET Umsatz = 20.51, Gewinn = 10.42
-WHERE SPA-ID = 1 AND REG-ID = 1 AND QUA_ID = 10;
+WHERE SPA_ID = 1 AND REG_ID = 1 AND QUA_ID = 10;
+
+SELECT * 
+FROM Fakt
+GROUP BY GROUPING SETS(
+  (SPA_ID),
+  (REG_ID),
+  (QUA_ID),
+)
+
+SELECT * 
+FROM Fakt
+GROUP BY CUBE(
+  (SPA_ID),
+  (REG_ID),
+  (QUA_ID),
+)
+
