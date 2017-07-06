@@ -19,6 +19,8 @@ GROUP BY GROUPING SETS(
   (SPA_ID),
   (REG_ID),
   (QUA_ID),
+  (),
+  ()
 )
 
 SELECT * 
